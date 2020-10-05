@@ -1,0 +1,90 @@
+<!-- Page Preloder -->
+
+<app-topbar></app-topbar>
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="hero__categories">
+
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="hero__categories">
+                    <app-search></app-search>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="categories">
+    <div class="container">
+    <ngb-carousel>
+        <ng-template ngbSlide>
+            <div class="hero__item set-bg" style="background-image: url(./assets/sneakers/homePage.JPG);"> 
+
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+                <div class="hero__item set-bg" style="background-image: url(./assets/sneakers/homePage2.JPG);"> 
+    
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                    <div class="hero__item set-bg" style="background-image: url(./assets/sneakers/homePag3.JPG);"> 
+        
+                    </div>
+                </ng-template>
+    </ngb-carousel>
+</div>
+</section>
+
+<!-- Categories Section End -->
+
+<!-- Featured Section Begin -->
+<section class="featured spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <div class="section-title">
+                            <h4>Featured Product</h4>
+                        </div>
+                <div class="featured__controls">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row featured__filter" style="margin-top: 40px;">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat" *ngFor="let shoe of shoeList">
+                <a (click) ="shoeDetailsPage(shoe.id)">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg">
+                            <img class="product__details__pic__item--large"
+                            src="./assets/sneakers/{{shoe.picturePaths[2]}}" alt="">
+                    </div>
+                    <div class="featured__item__text">
+                        <div class="row">
+                            <div class="col-6">
+                                    <h6><a href="#">{{shoe.brand.name}} {{shoe.name}}</a></h6>
+                            </div>
+                            <div class="col-6">
+                                    <h6><a href="#">{{shoe.releaseDate}}</a></h6>
+                            </div>
+                        </div>
+                       
+                        <h5>{{shoe.price}} $</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section Begin -->
+<footer class="footer spad">
+    <app-footer></app-footer>
+</footer>

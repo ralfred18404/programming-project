@@ -1,0 +1,57 @@
+<app-topbar></app-topbar>
+ 
+    <section class="shoping-cart spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__table">
+                        <div class="card">
+                            <div class="card-header" style="background-color: rgb(80, 139, 20);">
+                                    <h5 style="color: white;">Customer Orders</h5>
+                            </div>
+                            <div class="card-body"> 
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="shoping__product">Names</th>
+                                    <th class="shoping__product">Email</th>
+                                    <th class="shoping__product">Address</th>
+                                    <th class="shoping__product">Phone Number</th>
+                                    <th class="shoping__product">Total Amount</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let items of ordersList">
+                                    <td class="shoping__cart__item">
+                                        <h5>
+                                            <p>{{items.payment.firstName}} {{items.payment.lastName}}</p>
+                                        </h5>
+                                    </td>
+                                    <td class="shoping__cart__item">
+                                            {{items.payment.email}}
+                                    </td>
+                                    <td class="shoping__cart__item">
+                                            {{items.payment.address1}}  {{items.payment.address2}}
+                                    </td>
+                                    <td class="shoping__cart__item">
+                                       {{items.payment.phone}}
+                                    </td>
+                                    <td class="shoping__cart__item">
+                                            {{items.totalAmount}}$
+                                         </td>
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+   
+    
