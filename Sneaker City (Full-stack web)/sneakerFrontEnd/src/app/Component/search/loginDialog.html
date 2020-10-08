@@ -1,0 +1,38 @@
+<div class="splash-container">
+    <div class="card ">
+        <div class="card-header text-center"><a><img class="logo-img" src="../assets/sneakers/logo3.JPG" height="100"
+                    alt="logo"></a><span class="splash-description"></span>
+                    <button type="button" class="close" (click)="dialogRef.close('close')" 
+                    data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+        <div class="card-body">
+
+            <form>
+                <mat-form-field class="example-full-width" style="width: 80%;">
+                    <span matPrefix><i class="fa fa-user"></i> &nbsp;</span>
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text" autocomplete="off" name="username">
+                </mat-form-field>
+                <mat-form-field class="example-full-width" style="width: 80%;">
+                    <span matPrefix><i class="fa fa-unlock"></i> &nbsp;</span>
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" name="password" >
+                </mat-form-field>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember
+                            Me</span>
+                    </label>
+                </div>
+                <button (click)="login()" type="submit" class="site-btn btn-lg btn-block">Sign in</button>
+            </form>
+        </div>
+        <div class="card-footer bg-white p-0  ">
+            <div class="card-footer-item card-footer-item-bordered" id="footer1">
+                <a style="color:cornflowerblue; cursor: pointer;" (click)="openSignupDialog()" class="footer-link">Create Account</a></div>
+            <div class="card-footer-item card-footer-item-bordered" id="footer2">
+                <a style="color:cornflowerblue; cursor: pointer;" class="footer-link">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>

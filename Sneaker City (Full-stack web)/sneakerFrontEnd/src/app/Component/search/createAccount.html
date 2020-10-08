@@ -1,0 +1,88 @@
+
+<div *ngIf="successMessage" class="alert alert-success">
+account is well successfull created
+</div>
+<div *ngIf="failedMessage" class="alert alert-danger">
+    failed: {{message}}
+</div>
+<div class="card-header text-center"><a><img class="logo-img" src="../assets/img/logo.png"
+    alt="logo"></a><span class="splash-description"></span>
+    <button type="button" class="close" (click)="dialogRef.close('close')" 
+                    data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+
+<mat-dialog-content class="mat-typography" style="margin-top: 20px;">
+    <form>
+           
+        <div class="form-row">
+            
+            <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width" style="width: 80%;">
+                        <span matPrefix><i class="fa fa-address-book"></i> &nbsp;</span>
+                            <mat-label>Firt Name</mat-label>
+                            <input matInput name="firstName">
+                        </mat-form-field>
+            </div>
+            <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width" style="width: 80%;">
+                        <span matPrefix><i class="fa fa-address-card"></i> &nbsp;</span>
+                            <mat-label>last Name</mat-label>
+                            <input matInput  name="lastName">
+                          </mat-form-field>
+            </div>
+            
+        </div>
+        <div class="form-row">
+                <div class="form-group col-md-6">
+                        <mat-form-field class="example-full-width" style="width: 80%;">
+                                <span matPrefix><i class="fa fa-at"></i> &nbsp;</span>
+                                <mat-label>Email</mat-label>
+                                <input matInput name="email">
+                              </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                        <mat-form-field class="example-full-width" style="width: 80%;">
+                                <span matPrefix><i class="fa fa-phone"></i> &nbsp;</span>
+                                <mat-label>Phone Number</mat-label>
+                                <input matInput name="phoneNumber">
+                              </mat-form-field>
+                </div>
+           
+        </div>
+        <div class="form-row">
+                <div class="form-group col-md-4">
+                        <mat-form-field class="example-full-width" style="width: 80%;">
+                                <span matPrefix><i class="fa fa-user-circle"></i> &nbsp;</span>
+                                <mat-label>username</mat-label>
+                                <input matInput name="username">
+                              </mat-form-field>
+                </div>
+                <div class="form-group col-md-4">
+                        <mat-form-field class="example-full-width" style="width: 80%;">
+                                <span matPrefix><i class="fa fa-lock"></i> &nbsp;</span>
+                                <mat-label>password</mat-label>
+                                <input matInput name="password"  type="password">
+                              </mat-form-field>
+                </div>
+                <div class="form-group col-md-4">
+                        <mat-form-field class="example-full-width" style="width: 80%;">
+                                <span matPrefix><i class="fa fa-unlock"></i> &nbsp;</span>
+                                <mat-label>re-type password</mat-label>
+                                <input matInput name="confirm" type="password">
+                              </mat-form-field>
+                </div>
+           
+        </div>
+       
+            
+            
+    </form>
+</mat-dialog-content>
+<button type="submit" class="site-btn btn-lg btn-block" (click)="createAccount()">Sign Up</button>
+<div class="card-footer bg-white p-0  ">
+        <div class="card-footer-item card-footer-item-bordered" id="footer1">
+            <a style="color:cornflowerblue; cursor: pointer;" (click)="openLogin()" class="footer-link">Sign In</a></div>
+        <div class="card-footer-item card-footer-item-bordered" id="footer2">
+            <a style="color:cornflowerblue; cursor: pointer;" class="footer-link">Forgot Password</a>
+        </div>
+    </div>

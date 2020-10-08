@@ -1,0 +1,76 @@
+<app-topbar></app-topbar>
+<section class="hero hero-normal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+
+            </div>
+            <div class="col-lg-9">
+                <div class="hero__search">
+                    <app-search></app-search>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="container">
+            <div class="alert alert-success" *ngIf="successMessage">
+                    well successFull added To Cart
+                 </div>
+        <div class="row">
+
+            <div class="col-lg-12">
+                <section class="product-details spad">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="product__details__pic">
+                                    <div class="product__details__pic__item">
+                                            <ngb-carousel>
+                                                    <ng-template ngbSlide *ngFor="let img of model.picturePaths">
+                                        <img class="product__details__pic__item--large"
+                                            src="./assets/sneakers/{{img}}" alt="" height="500">
+                                                    </ng-template>
+                                                    </ngb-carousel>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="product__details__text">
+                                    <h3> {{model?.brand.name}} {{model?.name}}</h3>
+                                    <div class="product__details__rating">
+
+                                        <span>{{date}}</span>
+                                    </div>
+                                   
+                                    <div class="product__details__price">{{model?.price}}$</div>
+                                    <ul>
+                                        <li><b>Size And Quantity(qty)</b></li>
+                                    </ul>
+                                    <div class="row">
+                                        <div class="col-4" *ngFor="let size of shoeSize">
+                                            
+                                                <b class="heart-icon" style="cursor: pointer;" (click)="openDialog(size)">Size:{{size.size}}
+                                                        Qty:{{size.quantity}}</b>
+                                        </div>
+                                    </div>
+                                       
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Details Section End -->
+
+<!-- Related Product Section Begin -->
+
